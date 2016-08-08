@@ -12,6 +12,7 @@
   "scripts": {
     "postinstall": "npm run-script build",
     "build": "npm run-script styles",
+    "imagemin": "imagemin src/images/* --out-dir=dist/images",
     "styles": "npm run-script node-sass && npm run-script autoprefixer",
     "node-sass": "node-sass --output=dist/ --output-style=compressed src/",
     "autoprefixer": "postcss --use autoprefixer --config .autoprefixer.json --replace dist/styles/*"
@@ -19,6 +20,7 @@
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "6.4.0",
+    "imagemin-cli": "3.0.0",
     "node-sass": "3.8.0",
     "postcss-cli": "2.5.2"
   }
