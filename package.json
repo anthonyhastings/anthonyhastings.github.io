@@ -1,0 +1,25 @@
+{
+  "name": "antwan1986.github.io",
+  "description": "A portfolio page to showcase my skills and recent work.",
+  "author": "Anthony Hastings <ar.hastings@gmail.com>",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:antwan1986/antwan1986.github.io.git"
+  },
+  "scripts": {
+    "postinstall": "npm run-script build",
+    "build": "npm run-script styles",
+    "styles": "npm run-script node-sass && npm run-script autoprefixer",
+    "node-sass": "node-sass --output=dist/ --output-style=compressed src/",
+    "autoprefixer": "postcss --use autoprefixer --config .autoprefixer.json --replace dist/styles/*"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "6.4.0",
+    "node-sass": "3.8.0",
+    "postcss-cli": "2.5.2"
+  }
+}
