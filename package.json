@@ -11,7 +11,7 @@
   },
   "scripts": {
     "postinstall": "npm run-script build",
-    "build": "npm run-script styles",
+    "build": "npm run-script styles && npm run-script imagemin",
     "imagemin": "imagemin src/images/* --out-dir=dist/images",
     "styles": "npm run-script node-sass && npm run-script autoprefixer",
     "node-sass": "node-sass --output=dist/ --output-style=compressed src/",
