@@ -16,7 +16,8 @@
 .about-section__image-wrapper {
     position: relative;
     margin: 2.5rem auto;
-    width: 25rem;
+    width: 100%;
+    max-width: 25rem;
     flex-grow: 0;
     flex-shrink: 0;
     @include before-aspect-ratio-custom($paddingBottom: 100%);
@@ -42,7 +43,7 @@
 
 .about-section__copy-wrapper {
     @include bp(desktop-up) {
-        margin-left: 2.5rem;
+        margin-left: 4rem;
     }
 }
 

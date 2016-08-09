@@ -20,6 +20,36 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+ul {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend %font-headings;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.2rem;
+    line-height: 1;
+
+    @include bp(tablet-up) {
+        font-size: 4.8rem;
+    }
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: (42 / 32);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+    line-height: (32 / 22);
+    margin-bottom: 1.5rem;
+}
+
 .page-section {
     padding: 5rem map-get($keylines, small) 0 map-get($keylines, small);
     margin: 0 auto;
@@ -29,4 +59,13 @@ body {
 .page-section__paragraph {
     font-size: 1.8rem;
     line-height: (26 / 18);
+}
+
+.page-section__list:not(:last-of-type) {
+    margin-bottom: 2.5rem;
+}
+
+.page-section__list-item {
+    font-size: 1.6rem;
+    line-height: (22 / 16);
 }
