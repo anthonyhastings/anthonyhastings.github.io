@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: percentage(10 / 16);
+}
+
+body {
+    height: auto;
+    min-height: 100%;
+
+    background: palette(wildSand, base) url('../images/site-background.png') repeat;
+    color: palette(scorpion, base);
+    @extend %font-body;
+    font-size: 1.6rem;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page-section {
+    padding: 5rem map-get($keylines, small) 0 map-get($keylines, small);
+    margin: 0 auto;
+    max-width: map-get($max-widths, section);
+}
+
+.page-section__paragraph {
+    font-size: 1.8rem;
+    line-height: (26 / 18);
+}

@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-        <title>Anthony Hastings ~ Front-end Web Developer</title>
+        <title>Anthony Hastings: Front-end Web Developer</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
         <link href="dist/styles/landing.css" rel="stylesheet" />
         <link href="web-manifest.json" rel="manifest" />
 
@@ -13,25 +14,32 @@
         <!-- TODO: Implement META tags. -->
     </head>
     <body>
-        <header>
-            <h1>Anthony Hastings</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#open-source">Open-source</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section id="about">
-            <h2>About</h2>
-            <img src="dist/images/me-380.jpg" alt="A picture of myself." aria-hidden="true" />
-            <p>I am a passionate coder who has been hooked on the web since secondary school. I am particularly interested in the areas of JavaScript application architecture, build tooling, testing, performance and coding standards. Whenever free time allows I enjoy attending meetups such as BelfastJS and contributing to the open-source community via some libraries and tool stacks I currently have in circulation.</p>
-            <p>I enjoy going out and socialising with friends and colleagues. I’m also occasionally guilty of binge watching various Netflix original series like Daredevil, Jessica Jones and House of Cards. Being a long time PC gamer I swoon over anything sci-fi or cyberpunk themed such as Deus Ex, Mass Effect or Starcraft.</p>
+        <nav class="site-nav__wrapper">
+            <ul class="site-nav__list">
+                <li class="site-nav__list-item">
+                    <a class="site-nav__link" href="#about">About</a>
+                </li>
+                <li class="site-nav__list-item">
+                    <a class="site-nav__link" href="#skills">Skills</a>
+                </li>
+                <li class="site-nav__list-item">
+                    <a class="site-nav__link" href="#work">Work</a>
+                </li>
+                <li class="site-nav__list-item">
+                    <a class="site-nav__link" href="#code">Code</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="about" class="about-section page-section">
+            <div class="about-section__image-wrapper">
+                <img class="about-section__image" src="dist/images/me-380.jpg" alt="A picture of myself." aria-hidden="true" />
+            </div>
+            <div class="about-section__copy-wrapper">
+                <h1 class="about-section__heading">Hi. I'm <strong>Anthony</strong>.</h1>
+                <p class="about-section__paragraph page-section__paragraph">I am a passionate coder that's particularly interested in the areas of JavaScript application architecture, build tooling, testing, performance and coding standards. Whenever free time allows I enjoy attending meetups such as BelfastJS and contributing to the open-source community via some libraries and tool stacks I currently have in circulation.</p>
+            </div>
         </section>
-        <section id="skills">
+        <section id="skills" class="page-section">
             <h2>Skills</h2>
             <h3>Development</h3>
             <ul>
@@ -57,7 +65,7 @@
                 <li>Comfortable performing code reviews via pull requests.</li>
             </ul>
         </section>
-        <section id="work">
+        <section id="work" class="page-section">
             <h2>Work</h2>
             <ul>
                 <li>
@@ -86,8 +94,8 @@
                 </li>
             </ul>
         </section>
-        <section id="open-source">
-            <h2>Open-source contributions</h2>
+        <section id="code" class="page-section">
+            <h2>Code</h2>
             <ul>
                 <li>
                     <a href="https://github.com/rehabstudio/fe-skeleton" target="_blank">Front-end Skeleton</a> - A project starter kit supplying various build tools for quickstarting into any front-end development.
@@ -103,10 +111,10 @@
         <footer id="contact">
             <h3>Get in touch</h3>
             <ul>
-                <li><a href="https://codepen.io/antwan1986" target="_blank">Codepen</a></li>
-                <li><a href="https://github.com/antwan1986" target="_blank">Github</a></li>
-                <li><a href="https://www.linkedin.com/in/anthonyhastings" target="_blank">LinkedIn</a></li>
-                <li><a href="https://twitter.com/AnthonyHastings" target="_blank">Twitter</a></li>
+                <li><a class="svg-link" href="https://codepen.io/antwan1986" target="_blank">Codepen</a></li>
+                <li><a class="svg-link" href="https://github.com/antwan1986" target="_blank">Github</a></li>
+                <li><a class="svg-link" href="https://www.linkedin.com/in/anthonyhastings" target="_blank">LinkedIn</a></li>
+                <li><a class="svg-link" href="https://twitter.com/AnthonyHastings" target="_blank">Twitter</a></li>
             </ul>
             <small>&copy; 2016 Anthony Hastings.</small>
             <a href="#" aria-label="Return to the top of the page">Back to top</a>

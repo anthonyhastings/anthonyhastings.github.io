@@ -1,0 +1,54 @@
+// Colour palettes which group similar colours as shades of a generic one.
+$palettes: (
+    mineShaft: (
+        base: #282828
+    ),
+    scorpion: (
+        base: #5B5B5B
+    ),
+    white: (
+        base: #FFFFFF
+    ),
+    wildSand: (
+         base: #F4F4F4
+    )
+);
+
+// Collection of breakpoints used on the site.
+$bps: (
+    desktopUp: 1024px
+);
+
+// Values of keylines / gutters used throughout the site.
+$keylines: (
+    xsmall: 1.5rem,
+    small: 2.5rem
+);
+
+// Values of max widths for major site components and the site itself.
+$max-widths: (
+    section: 100rem
+);
+
+// Values of z-index for site components.
+$z-index: (
+    navigation: 100
+);
+
+// Collection of font stacks for use throughout the site via placeholders.
+$font-stack: (
+    headings: unquote("'Open Sans', Arial, sans-serif"),
+    body: unquote("'Open Sans', Arial, sans-serif")
+);
+
+%font-headings {
+    font-family: map-get($font-stack, headings);
+    font-weight: 700;
+    font-style: normal;
+}
+
+%font-body {
+    font-family: map-get($font-stack, body);
+    font-weight: 400;
+    font-style: normal;
+}

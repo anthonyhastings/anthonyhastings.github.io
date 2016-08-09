@@ -1,8 +1,18 @@
+// --------------------------
+// Third-party
+// --------------------------
 @import 'normalize';
 
-#test {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    width: percentage(15 / 150);
-}
+// --------------------------
+// Core includes
+// --------------------------
+@import 'variables';
+@import 'mixins';
+@import 'global';
+@import 'helpers';
+
+// --------------------------
+// Page elements
+// --------------------------
+@import 'navigation';
+@import 'about';
