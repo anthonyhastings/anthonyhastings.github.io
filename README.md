@@ -1,10 +1,17 @@
 # antwan.github.io
 
 ## Introduction
-WIP.
+This site acts as a simple portfolio style one pager to showcase off some of
+my work and list a few ways to contact me and see my code contributions.
 
 ## Installation
-WIP.
+The entire tooling stack is `npm` based. Have a look in the `package.json` for
+a list of available commands.
 
-
-Personal portfolio and information page
+## Functionality
+- "Add to Homescreen" functionality (via Web Manifest)
+- Mobile browser theme colours (via Web Manifest & Metadata)
+- Solid build tooling and editor configuration (via NPM Packages).
+- Semantic, clean and accessible markup.
+- Modern styling build pattern (using BEM as a methodology).
+- SVG spriting (via SVG defs).
