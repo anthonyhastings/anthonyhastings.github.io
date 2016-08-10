@@ -61,11 +61,11 @@ h3 {
     line-height: (26 / 18);
 }
 
-.page-section__list:not(:last-of-type) {
-    margin-bottom: 2.5rem;
-}
-
 .page-section__list-item {
     font-size: 1.6rem;
     line-height: (22 / 16);
+
+    &:not(:last-of-type) {
+        margin-bottom: 1.2rem;
+    }
 }

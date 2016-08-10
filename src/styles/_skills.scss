@@ -1,0 +1,27 @@
+.skills-section__pod-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    @include bp(desktop-up) {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+}
+
+.skills-section__pod {
+    &:not(:last-of-type) {
+        margin-bottom: 2.5rem;
+    }
+
+    @include bp(desktop-up) {
+        flex: 1 1 calc(100% / 3);
+
+        &:not(:last-of-type) {
+            margin-right: 5rem;
+            margin-bottom: 0;
+        }
+    }
+}
