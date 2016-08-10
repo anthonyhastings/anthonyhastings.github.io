@@ -1,7 +1,7 @@
 .site-footer__wrapper {
     background-color: palette(mineShaft, base);
     color: palette(white, base);
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .site-footer__inner {
@@ -14,33 +14,32 @@
     }
 }
 
-.site-footer__heading {
-    margin-bottom: 2.5rem;
-
-    @include bp(desktop-up) {
-        font-size: 3.2rem;
-        line-height: 1;
-    }
-}
-
 .site-footer__social-container {
     list-style: none;
     margin: 0;
     padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .site-footer__social-pod {
+    display: block;
+    flex: 0 1 8rem;
 }
 
 .site-footer__social-link {
     color: white;
-    transition: color 200ms;
-
+    transition: color 200ms, transform 200ms;
     display: block;
 
     &:hover,
     &:focus {
         color: palette(scorpion, base);
+        transform: scale(1.3);
     }
 }
 
