@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+.svg-sprite {
+    display: none;
+}
+
+html {
+    height: 100%;
+    font-size: percentage(10 / 16);
+}
+
+body {
+    height: auto;
+    min-height: 100%;
+
+    background: palette(wildSand, base) url('../images/site-background.png') repeat;
+    color: palette(scorpion, base);
+    @extend %font-body;
+    font-size: 1.6rem;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend %font-headings;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.2rem;
+    line-height: 1;
+
+    @include bp(tablet-up) {
+        font-size: 4.8rem;
+    }
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: (42 / 32);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+    line-height: (32 / 22);
+    margin-bottom: 1.5rem;
+}
+
+.page-section {
+    padding: 5rem map-get($keylines, small) 0 map-get($keylines, small);
+    margin: 0 auto;
+    max-width: map-get($max-widths, section);
+}
+
+.page-section__paragraph {
+    font-size: 1.8rem;
+    line-height: (26 / 18);
+}
+
+.page-section__list-item {
+    font-size: 1.6rem;
+    line-height: (22 / 16);
+
+    &:not(:last-of-type) {
+        margin-bottom: 1.2rem;
+    }
+}
+
+.page-section__button {
+    @extend %font-headings;
+    color: palette(white, base);
+    font-size: 1.4rem;
+    line-height: 4.6rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    appearance: none;
+    background-color: palette(mineShaft, base);
+    border: 0;
+    border-radius: 0.4rem;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+    cursor: pointer;
+    display: block;
+    min-width: 13rem;
+    padding: 0 1.5rem;
+
+    &:hover,
+    &:focus {
+        background-color: palette(scorpion, base);
+    }
+}

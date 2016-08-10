@@ -1,0 +1,40 @@
+// Outputs a media query for the selected breakpoint identifier.
+@mixin bp($point) {
+    @if $point == mobile-large-up {
+        @media (min-width: map-get($bps, mobileLargeUp)) { @content; }
+    }
+    @else if $point == tablet-up {
+        @media (min-width: map-get($bps, tabletUp)) { @content; }
+    }
+    @else if $point == desktop-up {
+        @media (min-width: map-get($bps, desktopUp)) { @content; }
+    }
+}
+
+// Outputs a pseudo-element to create a scalable, fixed aspect ratio element.
+// Simply apply your desired width to the parent element with no height set.
+@mixin before-aspect-ratio-custom($paddingBottom: 100%) {
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 100%;
+        padding-bottom: $paddingBottom;
+    }
+}
+
+// A short-handed way of looking up a colour within the nested colour map.
+//
+// Example Mapping:
+// $color: (
+//     caribbeanGreen: (
+//         base: #00BFA5,
+//         light: rgba(#00BFA5, 0.8)
+//     )
+// );
+//
+// Example Usage:
+// background-color: palette(caribbeanGreen, base);
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}

@@ -1,0 +1,30 @@
+{
+  "name": "antwan1986.github.io",
+  "description": "A portfolio page to showcase my skills and recent work.",
+  "author": "Anthony Hastings <ar.hastings@gmail.com>",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:antwan1986/antwan1986.github.io.git"
+  },
+  "scripts": {
+    "postinstall": "npm run-script build",
+    "watch": "npm run-script watch-styles",
+    "build": "npm run-script styles && npm run-script imagemin",
+    "imagemin": "imagemin src/images/* --out-dir=dist/images",
+    "styles": "npm run-script node-sass && npm run-script autoprefixer",
+    "node-sass": "node-sass --output=dist/ --output-style=compressed src/",
+    "autoprefixer": "postcss --use autoprefixer --config .autoprefixer.json --replace dist/styles/*",
+    "watch-styles": "nodemon --verbose --ext scss --watch src/styles --exec \"npm run-script styles\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "6.4.0",
+    "imagemin-cli": "3.0.0",
+    "node-sass": "3.8.0",
+    "nodemon": "1.4.1",
+    "postcss-cli": "2.5.2"
+  }
+}

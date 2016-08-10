@@ -1,0 +1,16 @@
+{
+    "display": "standalone",
+    "lang": "en-GB",
+    "name": "Anthony Hastings: Web Developer",
+    "orientation": "any",
+    "short_name": "AH",
+    "start_url": "/?utm_source=web_app_manifest",
+    "theme_color": "#5B5B5B",
+    "icons": [
+        {
+            "src": "dist/images/icon-128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ]
+}
