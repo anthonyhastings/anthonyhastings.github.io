@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.svg-sprite {
+    display: none;
+}
+
 html {
     height: 100%;
     font-size: percentage(10 / 16);
@@ -67,5 +71,31 @@ h3 {
 
     &:not(:last-of-type) {
         margin-bottom: 1.2rem;
+    }
+}
+
+.page-section__button {
+    @extend %font-headings;
+    color: palette(white, base);
+    font-size: 1.4rem;
+    line-height: 4.6rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    appearance: none;
+    background-color: palette(mineShaft, base);
+    border: 0;
+    border-radius: 0.4rem;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+    cursor: pointer;
+    display: block;
+    min-width: 13rem;
+    padding: 0 1.5rem;
+
+    &:hover,
+    &:focus {
+        background-color: palette(scorpion, base);
     }
 }

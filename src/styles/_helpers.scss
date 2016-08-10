@@ -40,3 +40,7 @@
         height: 100%;
     }
 }
+
+.svg-container--social::before {
+    padding-bottom: 100%;
+}
