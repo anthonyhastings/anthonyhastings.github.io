@@ -17,7 +17,7 @@
     "styles": "npm run-script node-sass && npm run-script autoprefixer",
     "node-sass": "node-sass --output=dist/ --output-style=compressed src/",
     "autoprefixer": "postcss --use autoprefixer --config .autoprefixer.json --replace dist/styles/*",
-    "watch-styles": "nodemon --ext scss --watch src/styles --exec \"npm run-script styles\""
+    "watch-styles": "nodemon --verbose --ext scss --watch src/styles --exec \"npm run-script styles\""
   },
   "dependencies": {},
   "devDependencies": {
