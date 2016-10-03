@@ -12,7 +12,7 @@
   "scripts": {
     "postinstall": "npm run-script build",
     "watch": "npm run-script watch-styles",
-    "build": "npm run-script styles && npm run-script imagemin",
+    "build": "npm run-script styles && npm run-script imagemin && npm run-script scripts",
     "imagemin": "imagemin src/images/* --out-dir=dist/images",
     "lint": "eslint src/scripts",
     "scripts": "npm run-script lint && webpack",
