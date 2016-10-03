@@ -16,8 +16,10 @@ function cacheOfflineAssets() {
     return caches.open(CACHE_NAME).then(function(cache) {
         let cachingAction = cache.addAll([
             '/',
-            '/dist/styles/landing.css',
-            '/dist/images/me-380.jpg'
+            'dist/styles/landing.css',
+            'dist/images/me-380.jpg',
+            'dist/scripts/app.min.js',
+            'web-manifest.json'
         ]);
 
         cachingAction.then(null, (rejection) => {
