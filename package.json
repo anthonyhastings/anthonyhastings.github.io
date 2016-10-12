@@ -11,7 +11,7 @@
   },
   "scripts": {
     "postinstall": "npm run-script build",
-    "watch": "npm run-script watch-styles",
+    "watch": "npm run-script watch-styles & npm run-script watch-scripts",
     "build": "npm run-script styles && npm run-script imagemin && npm run-script scripts",
     "imagemin": "imagemin src/images/* --out-dir=dist/images",
     "lint": "eslint src/scripts",

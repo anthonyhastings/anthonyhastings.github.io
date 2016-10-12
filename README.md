@@ -9,9 +9,10 @@ The entire tooling stack is `npm` based. Have a look in the `package.json` for
 a list of available commands.
 
 ## Functionality
-- "Add to Homescreen" functionality (via Web Manifest)
-- Mobile browser theme colours (via Web Manifest & Metadata)
-- Solid build tooling and editor configuration (via NPM Packages).
+- "Add to Homescreen" functionality (via Web Manifest).
+- Offline functionality (via ServiceWorker).
+- Mobile browser theme colours (via Web Manifest & Metadata).
+- Solid build tooling and editor configuration (via NPM Packages and Scripts).
 - Semantic, clean and accessible markup.
 - Modern styling build pattern (using BEM as a methodology).
 - SVG spriting (via SVG defs).
