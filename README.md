@@ -1,4 +1,4 @@
-# antwan.github.io
+# anthonyhastings.github.io
 
 ## Introduction
 This site acts as a simple portfolio style one pager to showcase off some of

@@ -1,5 +1,5 @@
 {
-  "name": "antwan1986.github.io",
+  "name": "anthonyhastings.github.io",
   "description": "A portfolio page to showcase my skills and recent work.",
   "author": "Anthony Hastings <ar.hastings@gmail.com>",
   "version": "1.0.0",
@@ -7,7 +7,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:antwan1986/antwan1986.github.io.git"
+    "url": "ssh://git@github.com:anthonyhastings/anthonyhastings.github.io.git"
   },
   "scripts": {
     "postinstall": "npm run-script build",
