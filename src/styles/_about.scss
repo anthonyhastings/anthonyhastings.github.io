@@ -50,8 +50,19 @@
 }
 
 .about-section__heading {
-    @extend %font-body;
-    margin: 0 0 2.5rem 0;
+    @extend %font-monospace;
+    display: inline-block;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+}
+
+.about-section__heading-inner {
+    animation: typing 1500ms steps(16, end) 750ms forwards, blink 1000ms step-end infinite;
+    border-right: 4px solid palette(scorpion, base);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
 }
 
 .about-section__paragraph {
@@ -74,5 +85,24 @@
     100% {
         box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
         transform: translatey(0px);
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: initial;
     }
 }
