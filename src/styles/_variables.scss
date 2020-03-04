@@ -38,7 +38,8 @@ $z-index: (
 // Collection of font stacks for use throughout the site via placeholders.
 $font-stack: (
     headings: unquote("'Open Sans', Arial, sans-serif"),
-    body: unquote("'Open Sans', Arial, sans-serif")
+    body: unquote("'Open Sans', Arial, sans-serif"),
+    monospace: unquote("'B612 Mono', monospace")
 );
 
 %font-headings {
@@ -49,6 +50,12 @@ $font-stack: (
 
 %font-body {
     font-family: map-get($font-stack, body);
+    font-weight: 400;
+    font-style: normal;
+}
+
+%font-monospace {
+    font-family: map-get($font-stack, monospace);
     font-weight: 400;
     font-style: normal;
 }
