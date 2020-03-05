@@ -5,6 +5,7 @@
 
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
     flex-wrap: wrap;
@@ -41,4 +42,11 @@
 
 .work-section__pod-inner {
     flex: 1 1 auto;
+}
+
+.work-section__thumbnail {
+    display: block;
+    margin-bottom: 1rem;
+    max-width: 46.4rem;
+    width: 100%;
 }
