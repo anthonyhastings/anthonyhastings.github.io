@@ -1,103 +1,104 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .svg-sprite {
-    display: none;
+  display: none;
 }
 
 html {
-    height: 100%;
-    font-size: percentage(10 / 16);
-    scroll-behavior: smooth;
+  font-size: percentage(10 / 16);
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-    height: auto;
-    min-height: 100%;
+  @extend %font-body;
 
-    background: palette(wildSand, base) url('../images/site-background.png') repeat;
-    color: palette(scorpion, base);
-    @extend %font-body;
-    font-size: 1.6rem;
-    line-height: 1;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+  background: palette(wild-sand, base) url('../images/site-background.png') repeat;
+  color: palette(scorpion, base);
+  font-size: 1.6rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: auto;
+  line-height: 1;
+  min-height: 100%;
 }
 
 ul {
-    margin: 0;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    @extend %font-headings;
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %font-headings;
+
+  margin: 0;
 }
 
 h1 {
-    font-size: 3.2rem;
-    line-height: 1;
-
-    @include bp(tablet-up) {
-        font-size: 4.8rem;
-    }
+  font-size: 3.2rem;
+  line-height: 1;
 }
 
 h2 {
-    font-size: 3.2rem;
-    line-height: (42 / 32);
-    margin-bottom: 1.5rem;
+  font-size: 3.2rem;
+  line-height: (42 / 32);
+  margin-bottom: 1.5rem;
 }
 
 h3 {
-    font-size: 2.2rem;
-    line-height: (32 / 22);
-    margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  line-height: (32 / 22);
+  margin-bottom: 1.5rem;
 }
 
 .page-section {
-    padding: 5rem map-get($keylines, small) 0 map-get($keylines, small);
-    margin: 0 auto;
-    max-width: map-get($max-widths, section);
+  margin: 0 auto;
+  max-width: map-get($max-widths, section);
+  padding: 5rem map-get($keylines, small) 0 map-get($keylines, small);
+  scroll-margin-top: 10rem;
 }
 
 .page-section__paragraph {
-    font-size: 1.8rem;
-    line-height: (26 / 18);
+  font-size: 1.8rem;
+  line-height: (26 / 18);
 }
 
 .page-section__list-item {
-    font-size: 1.6rem;
-    line-height: (22 / 16);
+  font-size: 1.6rem;
+  line-height: (22 / 16);
 
-    &:not(:last-of-type) {
-        margin-bottom: 1.2rem;
-    }
+  &:not(:last-of-type) {
+    margin-bottom: 1.2rem;
+  }
 }
 
 .page-section__button {
-    @extend %font-headings;
-    color: palette(white, base);
-    font-size: 1.4rem;
-    line-height: 4.6rem;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+  @extend %font-headings;
 
-    appearance: none;
-    background-color: palette(mineShaft, base);
-    border: 0;
-    border-radius: 0.8rem;
-    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+  appearance: none;
+  background-color: palette(mine-shaft, base);
+  border: 0;
+  border-radius: 0.8rem;
+  color: palette(white, base);
+  cursor: pointer;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 4.6rem;
+  min-width: 13rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 
-    cursor: pointer;
-    display: block;
-    min-width: 13rem;
-    padding: 0 1.5rem;
-
-    &:hover,
-    &:focus {
-        background-color: palette(scorpion, base);
-    }
+  &:hover,
+  &:focus {
+    background-color: palette(scorpion, base);
+  }
 }
-

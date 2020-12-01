@@ -10,17 +10,19 @@
     "url": "ssh://git@github.com:anthonyhastings/anthonyhastings.github.io.git"
   },
   "scripts": {
-    "postinstall": "npm run-script build",
-    "build": "npm run-script styles && npm run-script imagemin && npm run-script scripts",
-    "imagemin": "imagemin src/images/* --out-dir=dist/images",
-    "lint": "eslint src/scripts",
-    "scripts": "npm run-script lint && webpack",
-    "styles": "npm run-script node-sass && npm run-script autoprefixer",
-    "node-sass": "node-sass --output=dist/ --output-style=compressed src/",
-    "autoprefixer": "postcss --use autoprefixer --config .autoprefixer.json --replace dist/styles/*",
-    "watch": "npm run-script watch-styles & npm run-script watch-scripts",
-    "watch-scripts": "webpack --watch",
-    "watch-styles": "nodemon --verbose --ext scss --watch src/styles --exec \"npm run-script styles\""
+    "postinstall": "npm run build",
+    "build": "npm run styles && npm run images && npm run scripts",
+    "images": "imagemin src/images/* --out-dir=dist/images",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "lint:scripts": "eslint src/scripts",
+    "lint:styles": "time stylelint src/styles/*.scss",
+    "scripts": "npm run lint && webpack",
+    "styles": "npm run styles:compile && npm run styles:prefix",
+    "styles:compile": "node-sass --output=dist/ --output-style=compressed src/",
+    "styles:prefix": "postcss --use autoprefixer --config .autoprefixer.json --replace dist/styles/*",
+    "watch": "npm run watch:styles & npm run watch:scripts",
+    "watch:scripts": "webpack --watch",
+    "watch:styles": "nodemon --verbose --ext scss --watch src/styles --exec \"npm run styles\""
   },
   "dependencies": {},
   "devDependencies": {
@@ -30,9 +32,13 @@
     "babel-preset-es2015": "6.14.0",
     "eslint": "3.7.0",
     "imagemin-cli": "3.0.0",
-    "node-sass": "4.13.1",
-    "nodemon": "1.4.1",
+    "node-sass": "5.0.0",
+    "nodemon": "2.0.6",
     "postcss-cli": "2.5.2",
+    "stylelint": "13.8.0",
+    "stylelint-config-standard": "20.0.0",
+    "stylelint-order": "4.1.0",
+    "stylelint-scss": "3.18.0",
     "webpack": "1.13.2"
   }
 }

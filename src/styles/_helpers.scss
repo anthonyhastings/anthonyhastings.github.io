@@ -1,17 +1,17 @@
 // Used on anchors whose content contains an SVG element. The SVG can stop
 // cursor: pointer; from working and can also interfere with click events.
 .svg-link {
-    position: relative;
+  position: relative;
 
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
+  &::after {
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 // Apply this to an element which contains an SVG.
@@ -21,26 +21,26 @@
 // Give the ::before element a suitable padding-bottom to give the
 // container the right aspect ratio i.e. 100% for a square icon.
 .svg-container {
-    position: relative;
+  position: relative;
 
-    &::before {
-        content: '';
-        display: block;
-        height: 0;
-        width: 100%;
-    }
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+  }
 
-    > svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-    }
+  > svg {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .svg-container--social::before {
-    padding-bottom: 100%;
+  padding-bottom: 100%;
 }
