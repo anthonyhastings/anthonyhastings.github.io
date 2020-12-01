@@ -1,11 +1,13 @@
 // --------------------------
 // Third-party
 // --------------------------
+
 @import 'normalize';
 
 // --------------------------
 // Core includes
 // --------------------------
+
 @import 'variables';
 @import 'mixins';
 @import 'global';
@@ -14,6 +16,7 @@
 // --------------------------
 // Page elements
 // --------------------------
+
 @import 'navigation';
 @import 'about';
 @import 'skills';

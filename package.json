@@ -13,7 +13,9 @@
     "postinstall": "npm run build",
     "build": "npm run styles && npm run images && npm run scripts",
     "images": "imagemin src/images/* --out-dir=dist/images",
-    "lint": "eslint src/scripts",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "time stylelint src/styles/*.scss",
+    "lint:js": "eslint src/scripts",
     "scripts": "npm run lint && webpack",
     "styles": "npm run styles:compile && npm run styles:prefix",
     "styles:compile": "node-sass --output=dist/ --output-style=compressed src/",
@@ -33,6 +35,10 @@
     "node-sass": "5.0.0",
     "nodemon": "1.4.1",
     "postcss-cli": "2.5.2",
+    "stylelint": "13.8.0",
+    "stylelint-config-standard": "20.0.0",
+    "stylelint-order": "4.1.0",
+    "stylelint-scss": "3.18.0",
     "webpack": "1.13.2"
   }
 }
