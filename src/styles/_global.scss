@@ -61,7 +61,7 @@ h3 {
   margin: 0 auto;
   max-width: map-get($max-widths, section);
   padding: 5rem map-get($keylines, small) 0 map-get($keylines, small);
-  scroll-margin-top: 10rem;
+  scroll-margin-top: 2rem;
 }
 
 .page-section__paragraph {
