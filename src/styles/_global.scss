@@ -10,6 +10,10 @@ html {
   font-size: percentage(10 / 16);
   height: 100%;
   scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion) {
+    scroll-behavior: auto;
+  }
 }
 
 body {
