@@ -13,22 +13,22 @@ const CACHE_NAME = 'portfolio-v1';
  * @return {Promise}
  */
 function cacheOfflineAssets() {
-    return caches.open(CACHE_NAME).then(function(cache) {
-        let cachingAction = cache.addAll([
-            '/',
-            'dist/styles/landing.css',
-            'dist/images/me-380.jpg',
-            'dist/scripts/app.min.js',
-            'web-manifest.json'
-        ]);
+  return caches.open(CACHE_NAME).then((cache) => {
+    const cachingAction = cache.addAll([
+      '/',
+      'dist/styles/landing.css',
+      'dist/images/me-380.jpg',
+      'dist/scripts/app.min.js',
+      'web-manifest.json',
+    ]);
 
-        cachingAction.then(null, (rejection) => {
-            console.warn('ServiceWorker::cacheOfflineAssets', rejection);
-        });
-
-        return cachingAction;
+    cachingAction.then(null, (rejection) => {
+      console.warn('ServiceWorker::cacheOfflineAssets', rejection);
     });
-};
+
+    return cachingAction;
+  });
+}
 
 /**
  * After the service worker is registered, the browser will attempt to install
@@ -43,9 +43,9 @@ function cacheOfflineAssets() {
  * @param {Object} event
  */
 self.addEventListener('install', (event) => {
-    console.info('ServiceWorker::install', event);
+  console.info('ServiceWorker::install', event);
 
-    event.waitUntil(cacheOfflineAssets());
+  event.waitUntil(cacheOfflineAssets());
 });
 
 /**
@@ -55,19 +55,20 @@ self.addEventListener('install', (event) => {
  * @param {Object} event
  */
 self.addEventListener('activate', (event) => {
-    console.info('ServiceWorker::activate', event);
+  console.info('ServiceWorker::activate', event);
 
-    event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            return Promise.all(
-                cacheNames.map((cacheName) => {
-                    if (cacheName !== CACHE_NAME) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
+  event.waitUntil(
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+          return Promise.resolve();
         })
-    );
+      )
+    )
+  );
 });
 
 /**
@@ -78,14 +79,15 @@ self.addEventListener('activate', (event) => {
  * @param {Object} event
  */
 self.addEventListener('fetch', (event) => {
-    let request = event.request;
+  const { request } = event;
 
-    if (request.mode === 'navigate' || (request.method === 'GET'
-        && request.headers.get('accept').includes('text/html'))) {
-        console.info('Handling fetch event for', request.url);
+  if (
+    request.mode === 'navigate' ||
+    (request.method === 'GET' &&
+      request.headers.get('accept').includes('text/html'))
+  ) {
+    console.info('Handling fetch event for', request.url);
 
-        event.respondWith(
-            fetch(request).catch(() => caches.match('/'))
-        );
-    }
+    event.respondWith(fetch(request).catch(() => caches.match('/')));
+  }
 });

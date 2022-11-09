@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 .about-section {
   align-items: stretch;
   display: flex;
@@ -8,7 +10,7 @@
   @include bp(desktop-up) {
     align-items: center;
     flex-direction: row;
-    padding: 10rem map-get($keylines, small) 0 map-get($keylines, small);
+    padding: 10rem map.get($keylines, small) 0 map.get($keylines, small);
     text-align: left;
   }
 }
@@ -53,11 +55,12 @@
 
   display: inline-block;
   line-height: 1.2;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.5rem;
 }
 
 .about-section__heading-inner {
-  animation: typing 1500ms steps(16, end) 750ms forwards, blink 1000ms step-end infinite;
+  animation: typing 1500ms steps(16, end) 750ms forwards,
+    blink 1000ms step-end infinite;
   border-right: 4px solid palette(scorpion, base);
   display: inline-block;
   overflow: hidden;
@@ -75,17 +78,17 @@
 
 @keyframes float {
   0% {
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 60%);
     transform: translateY(0);
   }
 
   50% {
-    box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 25px 15px 0 rgb(0 0 0 / 20%);
     transform: translateY(-8px);
   }
 
   100% {
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 60%);
     transform: translateY(0);
   }
 }
@@ -101,8 +104,8 @@
 }
 
 @keyframes blink {
-  from,
-  to {
+  0%,
+  100% {
     border-color: transparent;
   }
 
