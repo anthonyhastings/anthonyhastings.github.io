@@ -1,8 +1,10 @@
+@use 'sass:map';
+
 // Outputs a media query for the selected breakpoint identifier.
 
 @mixin bp($point) {
   @if $point == desktop-up {
-    @media (min-width: map-get($bps, desktop-up)) {
+    @media (min-width: map.get($bps, desktop-up)) {
       @content;
     }
   }
@@ -22,7 +24,7 @@
 }
 
 // A short-handed way of looking up a colour within the nested colour map.
-//
+// ---
 // Example Mapping:
 // $color: (
 //     caribbeanGreen: (
@@ -30,10 +32,10 @@
 //         light: rgba(#00BFA5, 0.8)
 //     )
 // );
-//
+// ---
 // Example Usage:
 // background-color: palette(caribbeanGreen, base);
 
 @function palette($palette, $tone: 'base') {
-  @return map-get(map-get($palettes, $palette), $tone);
+  @return map.get(map.get($palettes, $palette), $tone);
 }

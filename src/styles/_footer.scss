@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 .site-footer__wrapper {
   background-color: palette(mine-shaft, base);
   color: palette(white, base);
@@ -6,19 +8,18 @@
 
 .site-footer__inner {
   margin: 0 auto;
-  max-width: map-get($max-widths, section);
-  padding: 2.5rem map-get($keylines, small);
+  max-width: map.get($max-widths, section);
+  padding: 2.5rem map.get($keylines, small);
 
   @include bp(desktop-up) {
-    padding: 5rem map-get($keylines, small);
+    padding: 5rem map.get($keylines, small);
   }
 }
 
 .site-footer__social-container {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
   list-style: none;
   margin: 0;

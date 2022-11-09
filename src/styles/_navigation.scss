@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 .site-nav__wrapper {
   align-items: stetch;
   background-color: palette(mine-shaft, base);
@@ -8,7 +10,7 @@
   position: fixed;
   width: 100%;
   will-change: transform;
-  z-index: map-get($z-index, navigation);
+  z-index: map.get($z-index, navigation);
 }
 
 .site-nav__list {
@@ -38,7 +40,7 @@
   display: block;
   height: 3rem;
   line-height: 3rem;
-  padding: 0 map-get($keylines, xsmall);
+  padding: 0 map.get($keylines, xsmall);
   text-decoration: none;
   transition: background-color 200ms;
 

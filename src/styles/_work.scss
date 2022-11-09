@@ -1,8 +1,7 @@
 .work-section__pod-container {
   align-items: stretch;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   justify-content: flex-start;
   list-style: none;
   margin: 0;
@@ -32,7 +31,7 @@
       margin-bottom: 0;
     }
 
-    &:not(:nth-last-child(-n+2)) {
+    &:not(:nth-last-child(-n + 2)) {
       margin-bottom: 2.5rem;
     }
   }

@@ -1,20 +1,13 @@
 {
-  "extends": [
-    "stylelint-config-standard"
-  ],
-  "plugins": [
-    "stylelint-order",
-    "stylelint-scss"
-  ],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
+  "plugins": ["stylelint-order"],
   "rules": {
     "at-rule-no-unknown": null,
-    "color-hex-case": "upper",
     "color-hex-length": "long",
     "comment-no-empty": true,
     "order/properties-alphabetical-order": true,
-    "scss/at-rule-no-unknown": true
+    "scss/at-rule-no-unknown": true,
+    "selector-class-pattern": null
   },
-  "ignoreFiles": [
-    "src/styles/_normalize.scss"
-  ]
+  "ignoreFiles": ["src/styles/_normalize.scss"]
 }

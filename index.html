@@ -1,203 +1,377 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-        <meta name="theme-color" content="#5B5B5B">
-        <meta name="description" content="I am a passionate coder that's particularly interested in the areas of JavaScript application architecture, build tooling, testing, performance and coding standards." />
-        <meta property="og:description" content="I am a passionate coder that's particularly interested in the areas of JavaScript application architecture, build tooling, testing, performance and coding standards." />
-        <meta property="og:title" content="Anthony Hastings: Web Developer" />
-        <meta property="og:site_name" content="Anthony Hastings Portfolio" />
-        <meta property="og:url" content="https://anthonyhastings.github.io/" />
-        <meta property="og:type" content="profile" />
-        <meta property="og:image" content="https://anthonyhastings.github.io/dist/images/me-380.jpg" />
-        <title>Anthony Hastings: Front-end Web Developer</title>
-        <link href="https://fonts.googleapis.com/css?family=B612+Mono|Open+Sans:400,700&display=swap" rel="stylesheet" />
-        <link href="dist/styles/landing.css" rel="stylesheet" />
-        <link href="dist/images/icon-128.png" rel="icon" />
-        <link href="web-manifest.json" rel="manifest" />
-    </head>
-    <body>
-        <svg class="svg-sprite">
-            <defs>
-                <symbol id="svg-codepen" viewBox="0 0 512 512"><path fill="currentColor" d="M427 201.9c-0.6-4.2-2.9-8-6.4-10.3L264.2 87.3c-4.9-3.3-11.4-3.3-16.3 0L91.4 191.6c-4 2.7-6.5 7.4-6.5 12.2v104.3c0 4.8 2.5 9.6 6.5 12.2l156.4 104.3c4.9 3.3 11.4 3.3 16.3 0L420.6 320.4c4-2.6 6.6-7.4 6.6-12.2V203.9C427.1 203.2 427.1 202.6 427 201.9 427 201.7 427.1 202.6 427 201.9zM270.7 127.1l115.2 76.8 -51.5 34.4 -63.8-42.7V127.1zM241.3 127.1v68.6l-63.8 42.7 -51.5-34.4L241.3 127.1zM114.3 231.4l36.8 24.6 -36.8 24.6V231.4zM241.3 384.9L126.1 308.1l51.5-34.4 63.8 42.6V384.9zM256 290.8l-52-34.8 52-34.8 52 34.8L256 290.8zM270.7 384.9V316.3l63.8-42.6 51.5 34.4L270.7 384.9zM397.7 280.6l-36.8-24.6 36.8-24.6V280.6z"/></symbol>
-                <symbol id="svg-github" viewBox="0 0 512 512"><path fill="currentColor" d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></symbol>
-                <symbol id="svg-linked-in" viewBox="0 0 512 512"><path fill="currentColor" d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></symbol>
-                <symbol id="svg-twitter" viewBox="0 0 512 512"><path fill="currentColor" d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"/></symbol>
-            </defs>
-        </svg>
-        <nav class="site-nav__wrapper">
-            <ul class="site-nav__list">
-                <li class="site-nav__list-item">
-                    <a class="site-nav__link" href="#about">About</a>
-                </li>
-                <li class="site-nav__list-item">
-                    <a class="site-nav__link" href="#skills">Skills</a>
-                </li>
-                <li class="site-nav__list-item">
-                    <a class="site-nav__link" href="#work">Work</a>
-                </li>
-                <li class="site-nav__list-item">
-                    <a class="site-nav__link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <section id="about" class="about-section page-section">
-            <div class="about-section__image-wrapper">
-                <img class="about-section__image" src="dist/images/me-380.jpg" alt="A picture of myself." aria-hidden="true" />
-            </div>
-            <div class="about-section__copy-wrapper">
-                <h1 class="about-section__heading"><span class="about-section__heading-inner">Hi. I'm <strong>Anthony</strong>.</span></h1>
-                <p class="about-section__paragraph page-section__paragraph">I am a passionate coder that's particularly interested in the areas of JavaScript application architecture, build tooling, testing, performance and coding standards. Whenever free time allows I enjoy attending meetups such as BelfastJS and contributing to the open-source community via some libraries and tool stacks I currently have in circulation.</p>
-            </div>
-        </section>
-        <section id="skills" class="page-section">
-            <h2>Skills</h2>
-            <div class="skills-section__pod-container">
-                <div class="skills-section__pod">
-                    <h3>Development</h3>
-                    <ul class="page-section__list">
-                        <li class="page-section__list-item">HTML5, CSS3 (SCSS), JavaScript (ES2015 onward), Ruby (Rails).</li>
-                        <li class="page-section__list-item">Experienced architecting single page applications (React/Redux).</li>
-                        <li class="page-section__list-item">Adept at creating back-end services and scripts (NodeJS w. Express).</li>
-                        <li class="page-section__list-item">Keen interest in build tooling, bundlers and test frameworks (Webpack, Jest).</li>
-                        <li class="page-section__list-item">Diligent in maintaining code quality via linting and code coverage (ESLint, Stylelint).</li>
-                        <li class="page-section__list-item">Well versed in testing applications (Unit, Integration and End-to-End tests).</li>
-                        <li class="page-section__list-item">Experience in i18n implementations (Gettext, MessageFormat).</li>
-                        <li class="page-section__list-item">Knowledgeable of a11y tools and techniques (Screen readers, Semantic markup, ARIA).</li>
-                        <li class="page-section__list-item">Mindful of page speed, performance, asset size and critical render path (Lighthouse).</li>
-                        <li class="page-section__list-item">Proficient in shipping to production (Docker, Jenkins, Feature flagging, Blue-Green deployments).</li>
-                    </ul>
-                </div>
-                <div class="skills-section__pod">
-                    <h3>Project Management</h3>
-                    <ul class="page-section__list">
-                        <li class="page-section__list-item">Worked on both agile and waterfall based projects.</li>
-                        <li class="page-section__list-item">Familiar with Atlassian products (JIRA, Confluence, Bitbucket).</li>
-                        <li class="page-section__list-item">Experience with kanban and scrum methodology; sprint planning, sprint reviews, sprint retrospectives, backlog maintenance, daily stand-up's.</li>
-                        <li class="page-section__list-item">Team lead versed in project planning / estimation, creating workstreams, task breakdown and conducting 1:1's.</li>
-                        <li class="page-section__list-item">Able to write technical documentation such as research spikes, functional specifications and flow diagrams.</li>
-                    </ul>
-                </div>
-                <div class="skills-section__pod">
-                    <h3>Other</h3>
-                    <ul class="page-section__list">
-                        <li class="page-section__list-item">Experience mentoring other team members in coding as well as process.</li>
-                        <li class="page-section__list-item">Proponent of pair programming, code reviewing and knowledge sharing.</li>
-                        <li class="page-section__list-item">Have given internal technical presentations and written tech newsletters / blog articles.</li>
-                        <li class="page-section__list-item">Familiar in iterating / monitoring via instrumentation, logging and A/B testing.</li>
-                        <li class="page-section__list-item">Have assisted with recruitment by shortlisting candidates and being a member of interviewing panels.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="work" class="page-section">
-            <h2>Work</h2>
-            <ul class="work-section__pod-container">
-                <li class="work-section__pod page-section__list-item">
-                    <div class="work-section__pod-inner">
-                        <h3>Digital Garage</h3>
-                        <picture>
-                            <source srcset="dist/images/digital_garage.webp" />
-                            <img class="work-section__thumbnail" src="dist/images/digital_garage.jpg" loading="lazy" />
-                        </picture>
-                        <strong>Role:</strong><br />
-                        Project lead and front-end developer.<br /><br />
-                        <strong>Summary:</strong><br />A learning platform launched in 33 markets with over 1,000,000 users.<br /><br />
-                        <strong>Build:</strong><br />Multiple AngularJS applications such as a multi-stage diagnostics tool.
-                    </div>
-                </li>
-                <li class="work-section__pod page-section__list-item">
-                    <div class="work-section__pod-inner">
-                        <h3>Blank - Dedicate A Frame</h3>
-                        <picture>
-                            <source srcset="dist/images/disney.webp" />
-                            <img class="work-section__thumbnail" src="dist/images/disney.jpg" loading="lazy" />
-                        </picture>
-                        <strong>Role:</strong><br />
-                        Front-end developer.<br /><br />
-                        <strong>Summary:</strong><br />
-                        A Valentine's Day campaign showcasing the launch of Disney's short film "Blank".<br /><br />
-                        <strong>Build:</strong><br />
-                        Backbone.js application with complex CSS page animations and sound effects.
-                    </div>
-                </li>
-                <li class="work-section__pod page-section__list-item">
-                    <div class="work-section__pod-inner">
-                        <h3>C-Max Live</h3>
-                        <picture>
-                            <source srcset="dist/images/cmax.webp" />
-                            <img class="work-section__thumbnail" src="dist/images/cmax.jpg" loading="lazy" />
-                        </picture>
-                        <strong>Role:</strong><br />
-                        Project lead and front-end developer.<br /><br />
-                        <strong>Summary:</strong><br />
-                        A user-generated content campaign featuring a 68-frame crowd-sourced stop-motion animation.<br /><br />
-                        <strong>Build:</strong><br />
-                        Bespoke JavaScript application with Instagram API integration and a custom-made stop-frame animation player.
-                    </div>
-                </li>
-                <li class="work-section__pod page-section__list-item">
-                    <div class="work-section__pod-inner">
-                        <h3>Personal Shopping Google+ Hangouts</h3>
-                        <picture>
-                            <source srcset="dist/images/topman.webp" />
-                            <img class="work-section__thumbnail" src="dist/images/topman.jpg" loading="lazy" />
-                        </picture>
-                        <strong>Role:</strong><br />
-                        Project lead and front-end developer.<br /><br />
-                        <strong>Summary:</strong><br />
-                        An online booking system and bespoke extension for personal shopping appointments conducted over Google+ Hangouts.<br /><br />
-                        <strong>Build:</strong><br />
-                        Google Hangouts Extension written as a single-page application using Backbone.js.
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <footer id="contact" class="site-footer__wrapper">
-            <div class="site-footer__inner">
-                <ul class="site-footer__social-container">
-                    <li class="site-footer__social-pod">
-                        <a class="site-footer__social-link svg-link" href="https://codepen.io/anthonyhastings" rel="noopener noreferrer" target="_blank" aria-label="Codepen" title="Codepen">
-                            <div class="svg-container svg-container--social">
-                                <svg><use xlink:href="#svg-codepen"></use></svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="site-footer__social-pod">
-                        <a class="site-footer__social-link svg-link" href="https://github.com/anthonyhastings" rel="noopener noreferrer" target="_blank" aria-label="Github" title="Github">
-                            <div class="svg-container svg-container--social">
-                                <svg><use xlink:href="#svg-github"></use></svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="site-footer__social-pod">
-                        <a class="site-footer__social-link svg-link" href="https://www.linkedin.com/in/anthonyhastings" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-                            <div class="svg-container svg-container--social">
-                                <svg><use xlink:href="#svg-linked-in"></use></svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="site-footer__social-pod">
-                        <a class="site-footer__social-link svg-link" href="https://twitter.com/AnthonyHastings" rel="noopener noreferrer" target="_blank" aria-label="Twitter" title="Twitter">
-                            <div class="svg-container svg-container--social">
-                                <svg><use xlink:href="#svg-twitter"></use></svg>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <small class="site-footer__print">&copy; 2016 Anthony Hastings</small>
-            </div>
-        </footer>
-        <script async src="dist/scripts/app.min.js"></script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimal-ui,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta name="theme-color" content="#5B5B5B" />
+    <meta
+      name="description"
+      content="I am a passionate coder that's particularly interested in the areas of JavaScript application architecture, build tooling, testing, performance and coding standards."
+    />
+    <meta
+      property="og:description"
+      content="I am a passionate coder that's particularly interested in the areas of JavaScript application architecture, build tooling, testing, performance and coding standards."
+    />
+    <meta property="og:title" content="Anthony Hastings: Web Developer" />
+    <meta property="og:site_name" content="Anthony Hastings Portfolio" />
+    <meta property="og:url" content="https://anthonyhastings.github.io/" />
+    <meta property="og:type" content="profile" />
+    <meta
+      property="og:image"
+      content="https://anthonyhastings.github.io/dist/images/me-380.jpg"
+    />
+    <title>Anthony Hastings: Front-end Web Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=B612+Mono|Open+Sans:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="dist/styles/landing.css" rel="stylesheet" />
+    <link href="dist/images/icon-128.png" rel="icon" />
+    <link href="web-manifest.json" rel="manifest" />
+  </head>
+  <body>
+    <svg class="svg-sprite">
+      <defs>
+        <symbol id="svg-codepen" viewBox="0 0 512 512">
+          <path
+            fill="currentColor"
+            d="M427 201.9c-0.6-4.2-2.9-8-6.4-10.3L264.2 87.3c-4.9-3.3-11.4-3.3-16.3 0L91.4 191.6c-4 2.7-6.5 7.4-6.5 12.2v104.3c0 4.8 2.5 9.6 6.5 12.2l156.4 104.3c4.9 3.3 11.4 3.3 16.3 0L420.6 320.4c4-2.6 6.6-7.4 6.6-12.2V203.9C427.1 203.2 427.1 202.6 427 201.9 427 201.7 427.1 202.6 427 201.9zM270.7 127.1l115.2 76.8 -51.5 34.4 -63.8-42.7V127.1zM241.3 127.1v68.6l-63.8 42.7 -51.5-34.4L241.3 127.1zM114.3 231.4l36.8 24.6 -36.8 24.6V231.4zM241.3 384.9L126.1 308.1l51.5-34.4 63.8 42.6V384.9zM256 290.8l-52-34.8 52-34.8 52 34.8L256 290.8zM270.7 384.9V316.3l63.8-42.6 51.5 34.4L270.7 384.9zM397.7 280.6l-36.8-24.6 36.8-24.6V280.6z"
+          />
+        </symbol>
+        <symbol id="svg-github" viewBox="0 0 512 512">
+          <path
+            fill="currentColor"
+            d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"
+          />
+        </symbol>
+        <symbol id="svg-linked-in" viewBox="0 0 512 512">
+          <path
+            fill="currentColor"
+            d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"
+          />
+        </symbol>
+        <symbol id="svg-twitter" viewBox="0 0 512 512">
+          <path
+            fill="currentColor"
+            d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <nav class="site-nav__wrapper">
+      <ul class="site-nav__list">
+        <li class="site-nav__list-item">
+          <a class="site-nav__link" href="#about">About</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a class="site-nav__link" href="#skills">Skills</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a class="site-nav__link" href="#work">Work</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a class="site-nav__link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="about" class="about-section page-section">
+      <div class="about-section__image-wrapper">
+        <img
+          class="about-section__image"
+          src="dist/images/me-380.jpg"
+          alt="A picture of myself."
+          aria-hidden="true"
+        />
+      </div>
+      <div class="about-section__copy-wrapper">
+        <h1 class="about-section__heading">
+          <span class="about-section__heading-inner"
+            >Hi. I'm <strong>Anthony</strong>.</span
+          >
+        </h1>
+        <p class="about-section__paragraph page-section__paragraph">
+          I am a passionate coder that's particularly interested in the areas of
+          JavaScript application architecture, build tooling, testing,
+          performance and coding standards. Whenever free time allows I enjoy
+          attending meetups such as BelfastJS and contributing to the
+          open-source community via some libraries and tool stacks I currently
+          have in circulation.
+        </p>
+      </div>
+    </section>
+    <section id="skills" class="page-section">
+      <h2>Skills</h2>
+      <div class="skills-section__pod-container">
+        <div class="skills-section__pod">
+          <h3>Development</h3>
+          <ul class="page-section__list">
+            <li class="page-section__list-item">
+              HTML5, CSS3 (SCSS), JavaScript (ES2015 onward), Ruby (Rails).
+            </li>
+            <li class="page-section__list-item">
+              Experienced architecting single page applications (React/Redux).
+            </li>
+            <li class="page-section__list-item">
+              Adept at creating back-end services and scripts (NodeJS w.
+              Express).
+            </li>
+            <li class="page-section__list-item">
+              Keen interest in build tooling, bundlers and test frameworks
+              (Webpack, Jest).
+            </li>
+            <li class="page-section__list-item">
+              Diligent in maintaining code quality via linting and code coverage
+              (ESLint, Stylelint).
+            </li>
+            <li class="page-section__list-item">
+              Well versed in testing applications (Unit, Integration and
+              End-to-End tests).
+            </li>
+            <li class="page-section__list-item">
+              Experience in i18n implementations (Gettext, MessageFormat).
+            </li>
+            <li class="page-section__list-item">
+              Knowledgeable of a11y tools and techniques (Screen readers,
+              Semantic markup, ARIA).
+            </li>
+            <li class="page-section__list-item">
+              Mindful of page speed, performance, asset size and critical render
+              path (Lighthouse).
+            </li>
+            <li class="page-section__list-item">
+              Proficient in shipping to production (Docker, Jenkins, Feature
+              flagging, Blue-Green deployments).
+            </li>
+          </ul>
+        </div>
+        <div class="skills-section__pod">
+          <h3>Project Management</h3>
+          <ul class="page-section__list">
+            <li class="page-section__list-item">
+              Worked on both agile and waterfall based projects.
+            </li>
+            <li class="page-section__list-item">
+              Familiar with Atlassian products (JIRA, Confluence, Bitbucket).
+            </li>
+            <li class="page-section__list-item">
+              Experience with kanban and scrum methodology; sprint planning,
+              sprint reviews, sprint retrospectives, backlog maintenance, daily
+              stand-up's.
+            </li>
+            <li class="page-section__list-item">
+              Team lead versed in project planning / estimation, creating
+              workstreams, task breakdown and conducting 1:1's.
+            </li>
+            <li class="page-section__list-item">
+              Able to write technical documentation such as research spikes,
+              functional specifications and flow diagrams.
+            </li>
+          </ul>
+        </div>
+        <div class="skills-section__pod">
+          <h3>Other</h3>
+          <ul class="page-section__list">
+            <li class="page-section__list-item">
+              Experience mentoring other team members in coding as well as
+              process.
+            </li>
+            <li class="page-section__list-item">
+              Proponent of pair programming, code reviewing and knowledge
+              sharing.
+            </li>
+            <li class="page-section__list-item">
+              Have given internal technical presentations and written tech
+              newsletters / blog articles.
+            </li>
+            <li class="page-section__list-item">
+              Familiar in iterating / monitoring via instrumentation, logging
+              and A/B testing.
+            </li>
+            <li class="page-section__list-item">
+              Have assisted with recruitment by shortlisting candidates and
+              being a member of interviewing panels.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="work" class="page-section">
+      <h2>Work</h2>
+      <ul class="work-section__pod-container">
+        <li class="work-section__pod page-section__list-item">
+          <div class="work-section__pod-inner">
+            <h3>Digital Garage</h3>
+            <picture>
+              <source srcset="dist/images/digital_garage.webp" />
+              <img
+                class="work-section__thumbnail"
+                src="dist/images/digital_garage.jpg"
+                loading="lazy"
+              />
+            </picture>
+            <strong>Role:</strong><br />
+            Project lead and front-end developer.<br /><br />
+            <strong>Summary:</strong><br />A learning platform launched in 33
+            markets with over 1,000,000 users.<br /><br />
+            <strong>Build:</strong><br />Multiple AngularJS applications such as
+            a multi-stage diagnostics tool.
+          </div>
+        </li>
+        <li class="work-section__pod page-section__list-item">
+          <div class="work-section__pod-inner">
+            <h3>Blank - Dedicate A Frame</h3>
+            <picture>
+              <source srcset="dist/images/disney.webp" />
+              <img
+                class="work-section__thumbnail"
+                src="dist/images/disney.jpg"
+                loading="lazy"
+              />
+            </picture>
+            <strong>Role:</strong><br />
+            Front-end developer.<br /><br />
+            <strong>Summary:</strong><br />
+            A Valentine's Day campaign showcasing the launch of Disney's short
+            film "Blank".<br /><br />
+            <strong>Build:</strong><br />
+            Backbone.js application with complex CSS page animations and sound
+            effects.
+          </div>
+        </li>
+        <li class="work-section__pod page-section__list-item">
+          <div class="work-section__pod-inner">
+            <h3>C-Max Live</h3>
+            <picture>
+              <source srcset="dist/images/cmax.webp" />
+              <img
+                class="work-section__thumbnail"
+                src="dist/images/cmax.jpg"
+                loading="lazy"
+              />
+            </picture>
+            <strong>Role:</strong><br />
+            Project lead and front-end developer.<br /><br />
+            <strong>Summary:</strong><br />
+            A user-generated content campaign featuring a 68-frame crowd-sourced
+            stop-motion animation.<br /><br />
+            <strong>Build:</strong><br />
+            Bespoke JavaScript application with Instagram API integration and a
+            custom-made stop-frame animation player.
+          </div>
+        </li>
+        <li class="work-section__pod page-section__list-item">
+          <div class="work-section__pod-inner">
+            <h3>Personal Shopping Google+ Hangouts</h3>
+            <picture>
+              <source srcset="dist/images/topman.webp" />
+              <img
+                class="work-section__thumbnail"
+                src="dist/images/topman.jpg"
+                loading="lazy"
+              />
+            </picture>
+            <strong>Role:</strong><br />
+            Project lead and front-end developer.<br /><br />
+            <strong>Summary:</strong><br />
+            An online booking system and bespoke extension for personal shopping
+            appointments conducted over Google+ Hangouts.<br /><br />
+            <strong>Build:</strong><br />
+            Google Hangouts Extension written as a single-page application using
+            Backbone.js.
+          </div>
+        </li>
+      </ul>
+    </section>
+    <footer id="contact" class="site-footer__wrapper">
+      <div class="site-footer__inner">
+        <ul class="site-footer__social-container">
+          <li class="site-footer__social-pod">
+            <a
+              class="site-footer__social-link svg-link"
+              href="https://codepen.io/anthonyhastings"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Codepen"
+              title="Codepen"
+            >
+              <div class="svg-container svg-container--social">
+                <svg><use xlink:href="#svg-codepen"></use></svg>
+              </div>
+            </a>
+          </li>
+          <li class="site-footer__social-pod">
+            <a
+              class="site-footer__social-link svg-link"
+              href="https://github.com/anthonyhastings"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Github"
+              title="Github"
+            >
+              <div class="svg-container svg-container--social">
+                <svg><use xlink:href="#svg-github"></use></svg>
+              </div>
+            </a>
+          </li>
+          <li class="site-footer__social-pod">
+            <a
+              class="site-footer__social-link svg-link"
+              href="https://www.linkedin.com/in/anthonyhastings"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <div class="svg-container svg-container--social">
+                <svg><use xlink:href="#svg-linked-in"></use></svg>
+              </div>
+            </a>
+          </li>
+          <li class="site-footer__social-pod">
+            <a
+              class="site-footer__social-link svg-link"
+              href="https://twitter.com/AnthonyHastings"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Twitter"
+              title="Twitter"
+            >
+              <div class="svg-container svg-container--social">
+                <svg><use xlink:href="#svg-twitter"></use></svg>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <small class="site-footer__print">&copy; 2016 Anthony Hastings</small>
+      </div>
+    </footer>
+    <script async src="dist/scripts/app.min.js"></script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
 
-            ga('create', 'UA-82320900-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-    </body>
+      ga('create', 'UA-82320900-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>
